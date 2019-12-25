@@ -67,6 +67,7 @@
                     <container>
                         <mainClass>com.mydeveloperplanet.myjibplanet.MyJibPlanetApplication</mainClass>
                         <format>OCI</format>
+                        <user>nobody</user>
                     </container>
                 </configuration>
             </plugin>
