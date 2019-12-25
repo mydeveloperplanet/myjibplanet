@@ -53,13 +53,21 @@
                 <artifactId>jib-maven-plugin</artifactId>
                 <version>1.8.0</version>
                 <configuration>
+                    <!-- openjdk:11.0.5-jdk -->
                     <from>
                         <image>openjdk@sha256:8dba6e4b1f2fd9b380aa23f12b887104d6484f1b95b71e8ed77a03beca2bd262</image>
                     </from>
                     <to>
                         <image>docker.io/${docker.image.prefix}/${project.artifactId}</image>
                         <credHelper>pass</credHelper>
+                        <tags>
+                            <tag>${project.version}</tag>
+                        </tags>
                     </to>
+                    <container>
+                        <mainClass>com.mydeveloperplanet.myjibplanet.MyJibPlanetApplication</mainClass>
+                        <format>OCI</format>
+                    </container>
                 </configuration>
             </plugin>
         </plugins>
